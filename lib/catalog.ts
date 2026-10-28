@@ -258,7 +258,7 @@ export const categories: Category[] = [
     tagline: "SS HDP · G.I · C.I Flanges · NRV · Brass · PVC",
     description:
       "SS HDP nipples, G.I & C.I fittings, flanges, valves, clamps and borewell accessories built for the field.",
-    cover: "/products/agriculture/oxyjal-ss-hdp-fittings/ss-hdp-nipples-group-photo.webp",
+    cover: "/products/agriculture/oxyjal-ss-hdp-fittings/agricluture-mix-products-photo.webp",
     groups: agricultureGroups,
   },
 ]
