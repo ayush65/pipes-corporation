@@ -92,6 +92,8 @@
     /* Reserve the scrollbar gutter so locking body scroll (mobile menu) cannot
        shift the whole page horizontally by the scrollbar width. */
     scrollbar-gutter: stable;
+    overflow-x: hidden;
+    max-width: 100vw;
   }
   @media (prefers-reduced-motion: reduce) {
     html {
@@ -100,8 +102,21 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
   }
-  h1, h2, h3, h4 {
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
     @apply font-display text-balance;
   }
 }

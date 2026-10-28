@@ -94,6 +94,8 @@ export const viewport: Viewport = {
   themeColor: '#111111',
   width: 'device-width',
   initialScale: 1,
+  maximumScale: 5,
+  viewportFit: 'cover',
 }
 
 const organizationSchema = {
@@ -177,8 +179,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${archivo.variable}`}>
-      <body className="antialiased">
+    <html lang="en" className={`${inter.variable} ${archivo.variable} overflow-x-hidden`}>
+      <body className="min-h-[100dvh] overflow-x-hidden antialiased">
         <MotionProvider>
           {/*
             The enquiry dialog lives here so the header button, the CTA band
@@ -188,7 +190,7 @@ export default function RootLayout({
           */}
           <EnquiryProvider categoryTitles={categories.map((category) => category.title)}>
             <SiteHeader />
-            <main id="main">{children}</main>
+            <main id="main" className="min-w-0">{children}</main>
             <SiteFooter />
             <WhatsAppFab />
           </EnquiryProvider>
