@@ -51,7 +51,8 @@ export default function ProductsPage() {
                     alt={c.title}
                     fill
                     sizes="(min-width: 1024px) 50vw, 100vw"
-                    className="object-contain p-6 transition-transform duration-700 group-hover:scale-105 motion-reduce:group-hover:scale-100"
+                    className="object-contain p-4 sm:p-6 lg:p-8 transition-transform duration-700 group-hover:scale-105 motion-reduce:group-hover:scale-100"
+                    priority={i === 0}
                   />
                   <span className="sr-only">View {c.title}</span>
                 </Link>
